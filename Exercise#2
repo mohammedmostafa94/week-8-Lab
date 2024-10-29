@@ -1,0 +1,6 @@
+code#2:
+num_string = input()
+total_sum = 0
+for char in num_string:
+    total_sum += int(char)
+print(total_sum)
