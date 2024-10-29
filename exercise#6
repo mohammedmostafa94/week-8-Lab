@@ -1,0 +1,21 @@
+code#6:
+def calculate_avg_words_per_sentence(filename):
+    try:
+        with open(filename, "r") as file:
+            sentences = file.readlines()
+            total_words = 0
+            total_sentences = len(sentences)
+            for sentence in sentences:
+                words = sentence.strip().split()
+                word_count = len(words)
+                total_words += word_count
+            if total_sentences > 0:
+                average = total_words / total_sentences
+            else:
+                average = 0
+            return average
+    except FileNotFoundError:
+        return "The file was not found."
+filename = "text.txt"
+average_words = calculate_avg_words_per_sentence(filename)
+print("Average number of words per sentence:", average_words)
