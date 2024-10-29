@@ -1,0 +1,6 @@
+code#1:
+full_name = input()
+name_parts = full_name.split()
+initials = [part[0].upper() + '.' for part in name_parts]
+initials_string = ''.join(initials)
+print(initials_string)
