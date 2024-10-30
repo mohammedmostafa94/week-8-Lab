@@ -1,0 +1,20 @@
+code#9:
+def main():
+    user_input = input("Enter a string: ")
+    print("That string has", vowels_count(user_input), "vowels and", consonant_count(user_input), "consonants")
+
+def vowels_count(input_string):
+    vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+    v_count = 0
+    for char in input_string:
+        if char in vowels:
+            v_count += 1
+    return v_count
+def consonant_count(input_string):
+    vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+    c_count = 0
+    for char in input_string:
+        if char.isalpha() and char not in vowels:
+            c_count += 1
+    return c_count
+main()
