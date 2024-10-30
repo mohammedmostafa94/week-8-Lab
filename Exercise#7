@@ -1,0 +1,22 @@
+code#7:
+def count_characters(file_path):
+    upper_case_count = 0
+    lower_case_count = 0
+    digit_count = 0
+    whitespace_count = 0
+    with open(file_path, "r") as file:
+        contents = file.read()
+        for char in contents:
+            if char.isupper():
+                upper_case_count += 1
+            elif char.islower():
+                lower_case_count += 1
+            elif char.isdigit():
+                digit_count += 1
+            elif char.isspace():
+                whitespace_count += 1
+    print("Number of Uppercase letters:", upper_case_count)
+    print("Number of Lowercase letters:", lower_case_count)
+    print("Number of digits:", digit_count)
+    print("Number of whitespace characters:", whitespace_count)
+count_characters('text.txt')
